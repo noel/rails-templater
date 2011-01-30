@@ -5,12 +5,13 @@ initialize_templater
 #Create Gemspec 
 create_file ".rvmrc", "rvm gemset use #{app_name}"
 
-required_recipes = %w(default jquery haml rspec factory_girl remarkable)
+required_recipes = %w(default jquery haml rspec devise simple_form nifty-generator factory_girl remarkable)
 required_recipes.each {|required_recipe| apply recipe(required_recipe)}
 
 load_options
 
-apply(recipe('cucumber')) if yes?("Do you want to some cukes?")  
+# apply(recipe('cucumber')) if yes?("Do you want to some cukes?")  
+apply recipe('cucumber')
 apply recipe('design')
 apply recipe('mongoid')
 

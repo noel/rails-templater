@@ -10,7 +10,9 @@ create_file 'tmp/.gitkeep'
 
 gsub_file 'config/application.rb', 'require "rails/test_unit/railtie"', '# require "rails/test_unit/railtie"'
 
-get "http://html5shiv.googlecode.com/svn/trunk/html5.js", "public/javascripts/html5.js"
+#  Info on shiv 
+#  http://stackoverflow.com/questions/3855294/html5shiv-vs-dean-edwards-ie7-js-vs-modernizr-which-to-choose
+# get "http://html5shiv.googlecode.com/svn/trunk/html5.js", "public/javascripts/html5.js"
 
 git :init
 

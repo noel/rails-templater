@@ -1,8 +1,9 @@
 .ackrc
 .rvmrc
+.DS_Store
 config/database.yml
 config/mongoid.yml
 public/cache/
-public/stylesheets/compiled/
 public/system/*
 tmp/restart.txt
+tmp/*
