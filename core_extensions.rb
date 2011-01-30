@@ -16,10 +16,12 @@ module Rails
 
       def load_options
         @template_options[:design] = ask("Which design framework? [compass(default), none]: ").downcase        
-        @template_options[:design] = "compass" if @template_options[:cucomber].blank?
+        @template_options[:design] = "compass" if @template_options[:design].blank?
+        puts "DESGIN option is ->  #{@template_options[:design]}"
         
         @template_options[:cucomber] = ask("Do you want to some cukes? [yes(default), no]: ").downcase
         @template_options[:cucomber] = "yes" if @template_options[:cucomber].blank?
+        puts "cuke option is ->  #{@template_options[:cucomber]}"
         
         @template_options[:orm] = options["skip_active_record"] ? "mongoid" : "active_record"
       end

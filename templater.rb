@@ -6,6 +6,7 @@ initialize_templater
 create_file ".rvmrc", "rvm gemset use #{app_name}"
 
 required_recipes = %w(default jquery haml rspec devise simple_form nifty-generator factory_girl remarkable)
+
 required_recipes.each {|required_recipe| apply recipe(required_recipe)}
 
 load_options

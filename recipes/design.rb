@@ -1,7 +1,6 @@
-if template_options[:design] == "compass"
+if template_options[:design] == "compass"  
   gem 'compass'
   gem "fancy-buttons"
-
 
   # TODO: support more than one framework from compass
   compass_sass_dir = "app/stylesheets"
